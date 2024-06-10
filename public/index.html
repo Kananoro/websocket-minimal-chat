@@ -2,10 +2,53 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="./css/index.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>WebSocket Chat</title>
 	</head>
 	<body>
-		<h1>Chat</h1>
+		<h1 class="title">Chat</h1>
+		<div class="main">
+			<div class="footer">
+				<input
+					type="text"
+					id="name-input"
+					class="footer_input"
+					value="anonymous"
+					maxlength="20" />
+			</div>
+			<ul class="message" id="message">
+				<!-- <li class="message_left">
+					<p class="message_text">
+						Lorem ipsum <span> bluebird 📱 26 July 10:40</span>
+					</p>
+				</li>
+				<li class="message_right">
+					<p class="message_text">
+						Lorem ipsum <span> bluebird 📱 26 July 10:40</span>
+					</p>
+				</li> -->
+
+				<!-- <li class="message_feedback">
+					<p class="message_typing" id="feedback">
+						✏️ user is typing a message...
+					</p>
+				</li> -->
+			</ul>
+
+			<form class="form" id="message-form">
+				<input
+					class="form_text"
+					type="text"
+					name="message"
+					id="message-input" />
+				<div class="v-devider"></div>
+				<button class="form_send" type="submit"> <p>send</p></button>
+			</form>
+		</div>
+		<h3 class="total" id="total">Total clients: 2</h3>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>
